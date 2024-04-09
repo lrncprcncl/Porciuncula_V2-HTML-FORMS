@@ -1,0 +1,336 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+  }
+
+  body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: #f3e8dc;
+  }
+
+  .container{
+    max-width: 800px;
+    background: #fff;
+    width: 800px;
+    padding: 25px 40px 10px 40px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+  }
+
+  img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    object-position: center;
+    
+  }
+
+  .container .container-text{
+    text-align: center;
+    font-size: 32px;
+    font-weight: 600;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: -webkit-linear-gradient(right, #866425, #ac956b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .form{
+    padding: 30px 0 0 0;
+  }
+
+  .container form .form-row{
+    display: flex;
+    margin: 32px 0;
+  }
+
+  form .form-row .input-data{
+    width: 100%;
+    height: 40px;
+    margin: 0 20px;
+    position: relative;
+  }
+  form .form-row .textarea{
+    height: 70px;
+  }
+
+  .input-data input,
+  .textarea textarea{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: none;
+    font-size: 17px;
+    border-bottom: 2px solid rgba(0,0,0, 0.12);
+  }
+
+.input-data input:focus ~ label, .textarea textarea:focus ~ label,
+.input-data input:valid ~ label, .textarea textarea:valid ~ label{
+  transform: translateY(-20px);
+  font-size: 14px;
+  color: #db9334;
+}
+
+.textarea textarea{
+    resize: none;
+    padding-top: 10px;
+  }
+
+.input-data label{
+    position: absolute;
+    pointer-events: none;
+    bottom: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+
+  .textarea label{
+    width: 100%;
+    bottom: 40px;
+    background: #fff;
+  }
+
+  .input-data .underline{
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+}
+  .input-data .underline:before{
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 100%;
+    background: #dba134;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+  }
+  .input-data input:focus ~ .underline:before,
+  .input-data input:valid ~ .underline:before,
+  .textarea textarea:focus ~ .underline:before,
+.textarea textarea:valid ~ .underline:before{
+    transform: scale(1);
+  }
+  @media (max-width: 700px) {
+    .container .text{
+      font-size: 30px;
+    }
+    .container form{
+      padding: 10px 0 0 0;
+    }
+    .container form .form-row{
+      display: block;
+    }
+    form .form-row .input-data{
+      margin: 35px 0!important;
+    }
+    .legacy-form-row {
+        margin-bottom: 10px;
+    }
+
+    .legacy-form-row legend {
+        width: 120px;
+        text-align: right;
+        padding-right: 20px;
+    }
+
+    .legacy-form-row legend {
+        float: left;
+    }
+  }
+
+  .form1{
+    padding-right: 150px;
+}
+
+.legacy-form-row{
+    border: none;
+    margin-bottom: 20px;
+}
+
+.legacy-form-row legend {
+    margin-bottom: 15px;
+}
+
+.legacy-form-row .radio-label {
+    display: block;
+    font-size: 14px;
+    padding: 0 20px 0 10px;
+}
+
+.legacy-form-row input[type=' radio']{
+    margin-top: 2px;
+}
+
+.legacy-form-row .radio-label,
+.legacy-form-row input[type='radio']{
+    float: left;
+}
+
+button,
+li,
+a {
+    all: unset;
+    box-sizing: border-box;
+}
+
+#dropdown {
+    --border-radius: 6px;
+    --shadow-color: 60deg 13% 61%;
+    max-width: 220px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    position: relative;
+}
+
+.dropdown-toggle,
+.menu-item,
+.submenu-item {
+    width: 100%;
+    padding: 12px 20px;
+    cursor: pointer;
+}
+
+:is(.menu-item, .submenu-item):first-child {
+    border-top-right-radius: inherit;
+    border-top-left-radius: inherit;
+}
+
+:is(.menu-item, .submenu-item):last-child {
+    border-bottom-right-radius: inherit;
+    border-bottom-left-radius: inherit;
+}
+
+:is(.menu-item, .submenu-item):hover {
+    background-color: #faf6ea;
+}
+
+.dropdown-toggle,
+.submenu-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dropdown-toggle > span {
+    color: #7b7b6e;
+}
+
+i {
+    color: #db8400;
+    transition: transform 0.25s ease;
+}
+
+.dropdown-toggle.open > i {
+    transform: rotate(180deg);
+}
+
+.dropdown {
+    position: relative;
+}
+
+.menu,
+.submenu {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.menu {
+    width: 100%;
+    transform: translateY(-12px);
+}
+
+.menu.open {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(12px);
+}
+
+.submenu {
+    width: max-content;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    transform: translate(-12px, 0);
+}
+
+.menu-item:hover > .submenu-toggle + .submenu {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(8px, 0);
+}
+
+.dropdown-toggle::after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 5px 0 5px;
+    border-color: darkred transparent transparent transparent;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+.menu-item.dropdown > a.submenu-toggle::after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width:5px 0 5px 5px;
+    border-color: transparent transparent transparent darkred;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+.submenu-item.dropdown > a.submenu-toggle::after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 0 5px 5px;
+    border-color: transparent transparent transparent darkred;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+.modal-footer {
+	padding: 1rem 1.5rem 1.5rem;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.btn-secondary, .btn-primary {
+	padding: .5rem 1rem;
+	font-weight: 500;
+	border: 2px solid var(--c-action-secondary);
+	border-radius: .25rem;
+    margin-left: 10px;
+	background-color: #d6d6d6;
+}
+
+.btn-primary {
+    background-color: #e6a970;
+}

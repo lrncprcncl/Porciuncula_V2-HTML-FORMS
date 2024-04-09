@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="order-styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="container-text"> 
+            <h2>Wake Up Call Cafe</h2>
+        </div>
+        <form class="form" action="#">
+            <div class="form-row">
+                <div class="input-data">
+                    <input type="text" required>
+                    <div class="underline"></div>
+                    <label for="">Name</label>
+                </div>
+                <div class="input-data">
+                    <input type="text" required>
+                    <div class="underline"></div>                        
+                    <label for="">Age</label>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="input-data">
+                    <input type="text" required>
+                    <div class="underline"></div>
+                    <label for="">Email Address</label>
+                </div>   
+            </div>
+            <div class="form-row">
+                <div class="form1">
+                    <fieldset class="legacy-form-row">
+                        <legend>Mode of Payment</legend>
+                        <input id="mode-type-1" name="mode-type" type="radio" value="cash" checked />
+                        <label for="mode-type-1" class="radio-label">Cash</label>
+                        <input id="mode-type-2" name="mode-type" type="radio" value="card" />
+                        <label for="mode-type-2" class="radio-label">Card</label>
+                    </fieldset>
+                </div>
+                <div class="form1">
+                    <fieldset class="legacy-form-row">
+                        <legend>For</legend>
+                        <input id="for-type-1" name="for-type" type="radio" value="dine-in" checked />
+                        <label for="for-type-1" class="radio-label">Dine-in</label>
+                        <input id="for-type-2" name="for-type" type="radio" value="take-out" />
+                        <label for="for-type-2" class="radio-label">Take-out</label>
+                    </fieldset>
+                </div>
+            </div>
+        </form>
+        <div id="dropdown">
+            <button class="dropdown-toggle">
+                <span>Type of Coffee</span>
+                <i class="fa-solid fa-caret-down"></i>
+            </button>
+            <ul class="menu">
+                <li class="menu-item"><a href="#">Cappuccino</a></li>
+                <li class="menu-item"><a href="#">Latte</a></li>
+                <li class="menu-item">
+                    <a href="#" class="submenu-toggle">
+                        <span>Espresso</span>
+                        <i class="fa-solid fa-caret-down"></i>
+                    </a>
+                    <ul class="submenu">
+                        <li class="submenu-item"><a href="#">Macchiato</a></li>
+                        <li class="submenu-item"><a href="#">Doppio</a></li>
+                        <li class="submenu-item"><a href="#">Americano</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item"><a href="#">Chocolate</a></li>
+            </ul>
+        </div>
+        <form class="form" action="#" style="margin-top: 150px;">
+            <div class="form-row">
+                <div class="input-data textarea">
+                   <textarea rows="8" cols="80" required></textarea>
+                   <br />
+                   <div class="underline"></div>
+                   <label for="">Write your message</label>
+                   <br />
+                 </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-secondary">Cancel</button>
+                <button class="btn-primary">Placed Order</button>
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
